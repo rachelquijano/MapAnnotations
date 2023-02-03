@@ -16,7 +16,8 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate {
     
     // map variable
-    let map = MKMapView()
+    // let map = MKMapView()
+    @IBOutlet weak var map: MKMapView!
     
     // custom coordinate
     let coordinate = CLLocationCoordinate2D(latitude: 40.728, longitude: -74)
@@ -26,10 +27,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         // creates the map as a subview of the main view on storyboard
-        view.addSubview(map)
+        // view.addSubview(map)
         
         // chooses the size of the map
-        map.frame = view.bounds
+        //map.frame = view.bounds
         
         // span = how far should the map camera show ?
         map.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)), animated: false)
